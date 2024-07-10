@@ -8,8 +8,11 @@ export default function Chat() {
   console.log(messages);
 
   return (
-    <section className="flex justify-center items-center h-screen">
-      <form onSubmit={handleSubmit} className="max-w-xl w-full">
+    <section className="flex justify-center items-center h-screen bg-black">
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-xl w-full bg-gray-900 p-4 rounded-lg"
+      >
         <div className="text-white max-h-96 h-full overflow-y-auto">
           {messages.map((m) => (
             <div
@@ -17,13 +20,13 @@ export default function Chat() {
               className={`flex flex-col mb-2 p-2 rounded-md ${
                 m.role === "assistant"
                   ? "self-end bg-gray-800"
-                  : "self-start bg-blue-700"
+                  : "self-start bg-gray-700"
               }`}
             >
               <span
                 className={`text-xs ${
                   m.role === "assistant" ? "text-right" : "text-left"
-                }`}
+                } text-gray-400`}
               >
                 {m.role}
               </span>{" "}
@@ -37,7 +40,7 @@ export default function Chat() {
             Say something...
           </label>
           <button
-            className="bg-blue-600 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:opacity-50"
+            className="bg-white text-black px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white disabled:opacity-50"
             disabled={isLoading || !input}
           >
             Send
@@ -47,7 +50,7 @@ export default function Chat() {
           rows={4}
           value={input}
           onChange={handleInputChange}
-          className="text-black bg-slate-300 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="text-white bg-gray-800 px-3 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-white"
           placeholder="Type something..."
           autoFocus
         />
