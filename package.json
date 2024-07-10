@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.10.0",
+    "ai": "^3.2.19",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "firebase": "^10.12.3",
