@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.36",
     "@tabler/icons-react": "^3.10.0",
     "ai": "^3.2.19",
     "autoprefixer": "^10.4.19",
